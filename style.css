@@ -1,0 +1,72 @@
+:root {
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 15px;
+  margin: 0;
+}
+body {
+  display: flex;
+  align-items: center;
+  min-height: 100vh;
+  background: rgb(85, 85, 85);
+  overflow: hidden;
+  justify-content: center;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  list-style: none;
+}
+
+.menu {
+  width: 300px;
+  height: auto;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  background: rgb(97, 121, 36);
+}
+
+.menu .btn {
+  border-bottom: solid 1px rgb(27, 27, 47);
+  border-top: solid 1px rgb(50, 85, 128);
+  position: relative;
+  display: block;
+  padding: 1rem;
+}
+
+.menu .submenu {
+  overflow: hidden;
+  max-height: 0;
+  background: rgb(27, 27, 47);
+}
+
+.menu .submenu a {
+  display: block;
+  padding: 15px;
+  position: relative;
+}
+
+.menu .submenu a::before {
+  height: 100%;
+  width: 5px;
+  background: rgb(228, 63, 90);
+  opacity: 0;
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.menu .submenu a:hover {
+  padding-left: calc(1rem + 5px);
+}
+
+.item:target .submenu {
+  max-height: 20rem;
+}
