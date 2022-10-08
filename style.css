@@ -65,6 +65,9 @@ body {
 
 .menu .submenu a:hover {
   padding-left: calc(1rem + 5px);
+  margin-left: 5px;
+  background-color: rgb(150, 198, 200);
+  font-size: large;
 }
 
 .item:target .submenu {
